@@ -1,0 +1,5 @@
+
+* emacs key bind (autohotkey)
+以下のファイル(emacs.ahk)をダウンロードして、autohotkey がダウンロード
+されていれるならファイルを右クリックして run script を押す
+
