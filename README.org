@@ -1,5 +1,9 @@
-
 * emacs key bind (autohotkey)
 以下のファイル(emacs.ahk)をダウンロードして、autohotkey がダウンロード
 されていれるならファイルを右クリックして run script を押す
+
+* キーバインド
+
+- 編集：Ctrl + Alt + e
+- 移動：emacs と同様
 

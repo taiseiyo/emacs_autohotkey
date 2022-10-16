@@ -4,6 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; scan code: https://ocamejp.com/autohotkey-scancodes/
+; use case https://forestail.com/software/autohotkey/#toc4
 
 ^!r::Reload
 ^!e::Edit
@@ -42,8 +43,17 @@ IsAltTabMenu := false
 #If
 
 ; courvas skk undo language
-^j::Send, !{sc029}
+; ^j::Send, !{sc029}
+
 
 ; max window and return window
-^!'::Send, #{Up}
-^!.::Send, #{Down}
+^!'::
+If Maximized
+WinRestore, A
+Else
+WinMaximize, A
+Maximized := Maximized ? "" : 1
+Return
+
+; make ctrl+Alt+. minimize the current window
+^!.::WinMinimize,A
